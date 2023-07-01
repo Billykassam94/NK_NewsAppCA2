@@ -24,6 +24,10 @@ const routes: Routes = [
         {
           path: 'golf',
           loadChildren: () => import('../golf/golf.module').then( m => m.GolfPageModule)
+        },
+        {
+          path: 'favourite',
+          loadChildren: () => import('../favourite/favourite.module').then( m => m.FavouritePageModule)
         }
       ]
     },
