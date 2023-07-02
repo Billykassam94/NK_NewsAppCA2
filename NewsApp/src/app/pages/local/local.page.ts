@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
 import { NewsService } from 'src/app/services/news.service';
 
+
 @Component({
   selector: 'app-local',
   templateUrl: './local.page.html',
@@ -14,6 +15,7 @@ export class LocalPage implements OnInit {
   
 
   constructor(private newsService: NewsService, private loadingCtrl: LoadingController) { }
+
 
   ngOnInit() {
     this.loadArticles();

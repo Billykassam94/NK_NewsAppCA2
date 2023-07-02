@@ -19,8 +19,8 @@ export interface ApiResult{
 export class NewsService {
   constructor(private http: HttpClient) { }
 
-    getLocalNews(page = 1): Observable<ApiResult> {
-     return this.http.get<ApiResult>(
+  getLocalNews(page = 1): Observable<ApiResult> {
+    return this.http.get<ApiResult>(
       `${environment.baseUrl}/top-headlines?country=ie&apiKey=${environment.apiKey}&page=${page}`);
 
   }
@@ -36,8 +36,5 @@ export class NewsService {
       `${environment.baseUrl}/everything?q=Golf&apiKey=${environment.apiKey}&page=${page}`);
 
   }
-
-
-
 
 }
